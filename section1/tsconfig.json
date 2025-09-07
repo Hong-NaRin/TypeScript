@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // ESNext => 자바스크립트 최신 버전
+    "module": "ESNext", // module 버전 -> CommonJs, ESNext
+    "outDir": "dist", // 컴파일 결과가 생성될 자바스크립트 파일들이 어디 폴더에 위치할지
+    "strict": false, // true는 타입스크립트가 코드를 엄격하게 검사하게 됨
+    "moduleDetection": "force",
+    "skipLibCheck": true
+  },
+  "include": ["src"] // src 아래에 있는 모든 파일을 포함해서 한 번에 컴파일 해라
+}

@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "outDir": "dist",
+    "strict": true, // strictNullChecks 옵션의 상위 버전 -> 이게 꺼져 있으면 밑에도 자동으로 꺼져있지만, 명시적으로 따로 지정하면 가능
+    // "strictNullChecks": false, // 엄격하게 null을 검사 -> null 타입이 아닌 변수에 null 값을 할당하는 것을 허용할 건지
+    "moduleDetection": "force",
+    "skipLibCheck": true
+  },
+  "include": ["src"]
+}
