@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // TypeScript가 어떤 JavaScript 버전으로 변환
+    "module": "ESNext", // 모듈 시스템 지정 (import/export)
+    "outDir": "dist", // 컴파일된 JS 파일이 저장될 폴더 경로
+    "strict": true, // 엄격 모드 활성화.
+    "moduleDetection": "force", // TS가 모듈인지 스크립트인지 감지하는 방식 -> force는 모든 파일을 모듈로 취급
+    "skipLibCheck": true // 라이브러리 타입 검사 건너뛰기
+  },
+  "include": ["src"]
+}
