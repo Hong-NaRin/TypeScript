@@ -1,72 +1,84 @@
 /*
- * unknown 타입
+ * 기본 타입 간의 호환성
  */
 
-// unknown 타입이 모든 타입의 슈퍼타입이므로 모든 타입에 업캐스팅이 가능하다.
-function unknownExam() {
-  let a: unknown = 1;
-  let b: unknown = "hello";
-  let c: unknown = true;
-  let d: unknown = null;
-  let e: unknown = undefined;
+let num1: number = 10;
+let num2: 10 = 10;
 
-  let unknownVar: unknown;
-
-  // 다른 타입에 unknown 값을 넣겠다는 건 다운캐스팅 시키겠다는 의미이므로 오류
-  // let num: number = unknownVar;
-  // let str: string = unknownVar;
-  // let bool: boolean = unknownVar;
-}
+num1 = num2; // num2의 값을 num1에 대입 -> number타입이 number 리터럴 타입의 슈퍼타입임 (업 캐스팅)
 
 /*
- * Never 타입 -> 공집합 : 모든 집합의 부분 집합
+ * 객체 타입 간의 호환성 -> 어떤 객체 타입을 다른 객체 타입으로 취급해도 괜찮은가?
  */
 
-function neverExam() {
-  function neverFunc(): never {
-    // 함수가 반환하는 값의 종류는 '공집합이다' (반환할 수 있는 값의 종류가 아무 것도 없다)라는 의미
-    while (true) {}
-  }
+// 추가 프로퍼티가 없는, 조건이 더 적은 타입이 슈퍼타입이 됨
+type Animal = {
+  name: string;
+  color: string;
+};
 
-  // never 타입은 모든 타입의 서브타입이기 때문에 어떤 타입의 변수에도 값을 넣을 수 있음 (업캐스팅)
-  let num: number = neverFunc();
-  let str: string = neverFunc();
-  let bool: boolean = neverFunc();
+// 객체 타입들 간의 관계를 정의할 때는 bread 같은 추가 프로퍼티가 있는 타입이 서브 타입
+type Dog = {
+  name: string;
+  color: string;
+  bread: string;
+};
 
-  // 다운 캐스팅 불가로 오류
-  // let never1: never = 10;
-  // let never2: never = "string";
-  // let never3: never = true;
-}
+let animal: Animal = {
+  // bread 프로퍼티가 없으니 Dog 타입으로 볼 수 없음
+  name: "기린",
+  color: "yellow",
+};
+
+let dog: Dog = {
+  name: "돌돌이",
+  color: "brown",
+  bread: "진도",
+};
+
+animal = dog; // dog 값을 animal 변수에 넣을 수 있음(업 캐스팅) -> Animal (슈퍼 타입), Dog (서브 타입)
+// dog = animal; -> 다운 캐스팅으로 오류
+
+// 추가 프로퍼티가 없으므로 슈퍼 타입
+type Book = {
+  name: string;
+  price: number;
+};
+
+// 서브 타입
+type ProgramingBook = {
+  name: string;
+  price: number;
+  skill: string;
+};
+
+let book: Book;
+let programingBook: ProgramingBook = {
+  name: "한 입 크기로 잘라먹는 리액트",
+  price: 33000,
+  skill: "react.js",
+};
+
+book = programingBook; // -> 업 캐스팅
+// programingBook = book; -> 다운 캐스팅
 
 /*
- * Void 타입
+ * 초과 프로퍼티 검사
  */
 
-function voidExam() {
-  function voidFunc(): void {
-    // 반환값이 없을 때 void를 사용
-    console.log("hi");
-    return undefined; // void 타입으로 했지만 업캐스팅으로 undefined 반환 가능함
-  }
+let book2: Book = {
+  name: "한 입 크기로 잘라먹는 리액트",
+  price: 33000,
+  // skill: "react.js", -> book = programingBook;으로 업 캐스팅하면 쓸 수 있어야 하지만 실제 타입에는 정의해놓지 않은 프로퍼티를 작성하면 초과 프로퍼티 검사가 실행됨
+};
 
-  // void 타입은 undefined 타입의 슈퍼타입 (업캐스팅)
-  let voidVar: void = undefined;
-}
+// 초과 프로퍼티를 피하려면
+let book3: Book = programingBook; // 방법1 - 초기화할 때 객체 리터럴을 사용한 것은 아니기 때문에 초과 프로퍼티가 발생하지 X
 
-/*
- * Any 타입 -> unknown 타입의 서브타입으로 위치해 있지만 치트키 타입임 (타입 계층도를 완벽히 무시함)
- * 결론 : 모든 타입의 슈퍼타입으로 위치하기도 하며, never를 제외한 모든 타입의 서브타입으로 위치하기도 함
- * -> (자신한테 다운 캐스팅 하는 것도 되고, 자신이 다운캐스팅 하는 것도 됨)
- */
-
-function anyExam() {
-  let unknownVar: unknown;
-  let anyVar: any;
-  let undefinedVar: undefined;
-  let neverVar: never;
-
-  anyVar = unknownVar; // any 타입이 unknown 타입의 서브 타입으로 위치하고 있지만 다운 캐스팅이 가능하다.
-  undefinedVar = anyVar; // undifined가 서브 타입, any가 슈퍼 타입 -> undifined 타입에 any타입의 값을 넣고 있으므로 다운 캐스팅이지만 가능하다.
-  // neverVar: anyVar; -> never타입에 any타입 값을 넣어 다운캐스팅 하고 있음 (불가능) => never타입은 공집합이기 때문에 어떤 타입도 다운 캐스팅 할 수 없음
-}
+function func(book: Book) {} // 방법2 - 함수의 매개변수에 타입 정의
+func({
+  name: "한 입 크기로 잘라먹는 리액트",
+  price: 33000,
+  // skill: "react.js" -> 함수를 호출하고 인수로 객체 리터럴을 전달하면 초과 프로퍼티가 발동
+});
+func(programingBook); // 서브타입 객체를 넣으려고 하면 변수에 저장했다가 변수를 인수로 전달
