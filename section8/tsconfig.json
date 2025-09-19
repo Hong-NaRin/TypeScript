@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "outDir": "dist",
+    "strict": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+    "allowJs": true // js 파일도 허용해줌
+    // "noImplicitAny": false -> 암시적 any를 허용하지 않을 것이냐는 질문에 false로 암시적 any를 허용
+  },
+  "include": ["src"] // src에는 ts파일만 들어가야 되는데 js파일을 잘못 만든 거 아니냐고 오류를 발생하게 됨
+}
