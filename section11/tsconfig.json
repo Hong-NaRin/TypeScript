@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "CommonJs",
+    "strict": true,
+    "allowJs": true, // js파일을 ts파일로 바꾸지 않았지만, ts컴파일러가 js를 컴파일 하도록 허용
+    "esModuleInterop": true,
+    "jsx": "react-jsx"
+  },
+  "include": ["src"]
+}
