@@ -15,3 +15,6 @@
 - 기본타입 / 원시타입 / 리터럴타입 (https://urzlul.tistory.com/11)
 - 배열과 튜플, 객체 (https://urzlul.tistory.com/12)
 - 타입 별칭 / 인덱스 시그니처 / 열거형 타입 (https://urzlul.tistory.com/13)
+- 특수 타입 : any, unknown, avoid, never (https://urzlul.tistory.com/14)
+
+## Section3
