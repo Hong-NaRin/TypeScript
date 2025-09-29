@@ -18,3 +18,17 @@
 - 특수 타입 : any, unknown, avoid, never (https://urzlul.tistory.com/14)
 
 ## Section3
+
+## Section4
+
+## Section5
+
+## Section6
+
+## Section7
+
+## Section8
+
+## Section9
+
+## Section10
