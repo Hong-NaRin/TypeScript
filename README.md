@@ -18,6 +18,7 @@
 - 특수 타입 : any, unknown, avoid, never (https://urzlul.tistory.com/14)
 
 ## Section3
+- 타입 계층도와 함께 기본타입 살펴보기 (https://urzlul.tistory.com/15)
 
 ## Section4
 
