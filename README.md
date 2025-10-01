@@ -18,9 +18,13 @@
 - 특수 타입 : any, unknown, avoid, never (https://urzlul.tistory.com/14)
 
 ## Section3
-- 타입 계층도와 함께 기본타입 살펴보기 (https://urzlul.tistory.com/15)
+- 타입 계층도와 함께 타입 살펴보기 (https://urzlul.tistory.com/15)
+- 대수 타입과 타입 추론 (https://urzlul.tistory.com/16)
+- 타입 단언과 타입 좁히기, 서로소 유니온 타입 (https://urzlul.tistory.com/17)
 
 ## Section4
+- 함수 타입 정의와 표현식, 호출 시그니처, 타입 호환성 (https://urzlul.tistory.com/18)
+- 함수 오버로딩과 사용자 정의 타입가드 (https://urzlul.tistory.com/19)
 
 ## Section5
 
