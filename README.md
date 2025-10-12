@@ -27,6 +27,8 @@
 - 함수 오버로딩과 사용자 정의 타입가드 (https://urzlul.tistory.com/19)
 
 ## Section5
+- (https://urzlul.tistory.com/20)
+- (https://urzlul.tistory.com/21)
 
 ## Section6
 
