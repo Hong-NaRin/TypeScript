@@ -35,6 +35,7 @@
 - (https://urzlul.tistory.com/23)
 
 ## Section7
+- (https://urzlul.tistory.com/24)
 
 ## Section8
 
