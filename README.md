@@ -1,8 +1,7 @@
 # 📘 TypeScript 내용 정리  
-<br>
 
 ## Section0
-- 타입스크립트 개발 환경 설정하기 (https://urzlul.tistory.com/2)
+- 타입스크립트 개발 환경 설정하기 (https://urzlul.tistory.com/2) <br>
 
 ## Section1
 - 타입스크립트 소개 (https://urzlul.tistory.com/6)
@@ -27,14 +26,14 @@
 - 함수 오버로딩과 사용자 정의 타입가드 (https://urzlul.tistory.com/19)
 
 ## Section5
-- (https://urzlul.tistory.com/20)
-- (https://urzlul.tistory.com/21)
+- 인터페이스의 정의와 확장, 선언 합치기 (https://urzlul.tistory.com/20)
 
 ## Section6
+- (https://urzlul.tistory.com/21)
 - (https://urzlul.tistory.com/22)
-- (https://urzlul.tistory.com/23)
 
 ## Section7
+- (https://urzlul.tistory.com/23)
 - (https://urzlul.tistory.com/24)
 
 ## Section8
