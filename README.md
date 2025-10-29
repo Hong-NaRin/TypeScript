@@ -38,6 +38,7 @@
 - 타입스크립트 제네릭 완전 정복 ③ - 클래스 제네릭과 Promise 활용 (https://urzlul.tistory.com/25)
 
 ## Section8
+- 타입스크립트 타입 조작 A to Z : Indexed Access / keyof & typeof / Mapped / Template Literal (https://urzlul.tistory.com/26)
 
 ## Section9
 
