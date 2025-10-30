@@ -30,16 +30,18 @@
 
 ## Section6
 - 자바스크립트와 타입스크립트의 클래스 완벽 정리 (https://urzlul.tistory.com/21)
-- 타입스크립트 클래스 심화 : 접근 제어자부터 인터페이스까지 (https://urzlul.tistory.com/22)
+- 클래스 심화 : 접근 제어자부터 인터페이스까지 (https://urzlul.tistory.com/22)
 
 ## Section7
-- 타입스크립트 제네릭 완전 정복 ① - 제네릭 기초와 타입 변수 활용법 (https://urzlul.tistory.com/23)
-- 타입스크립트 제네릭 완전 정복 ② - map/forEach 메서드 타입 정의, 인터페이스 & 타입 별칭 활용 (https://urzlul.tistory.com/24)
-- 타입스크립트 제네릭 완전 정복 ③ - 클래스 제네릭과 Promise 활용 (https://urzlul.tistory.com/25)
+- 제네릭 완전 정복 ① - 제네릭 기초와 타입 변수 활용법 (https://urzlul.tistory.com/23)
+- 제네릭 완전 정복 ② - map/forEach 메서드 타입 정의, 인터페이스 & 타입 별칭 활용 (https://urzlul.tistory.com/24)
+- 제네릭 완전 정복 ③ - 클래스 제네릭과 Promise 활용 (https://urzlul.tistory.com/25)
 
 ## Section8
-- 타입스크립트 타입 조작 A to Z : Indexed Access / keyof & typeof / Mapped / Template Literal (https://urzlul.tistory.com/26)
+- 타입 조작 A to Z : Indexed Access / keyof & typeof / Mapped / Template Literal (https://urzlul.tistory.com/26)
 
 ## Section9
+- 조건부 타입 : 제네릭 / 분산적 조건부 / infer 이해하기 (https://urzlul.tistory.com/27)
 
 ## Section10
+- 유틸리티 타입 : 맵드 타입 / 조건부 타입 (https://urzlul.tistory.com/28)
